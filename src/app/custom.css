@@ -1,0 +1,47 @@
+.text-wrap-balance{
+    text-wrap: balance;
+}
+
+.line-height-7xl{
+    line-height: 85px;
+}
+
+.line-height-2xl{
+    line-height: 38px;
+}
+
+.text-wrap-pretty{
+    text-wrap: pretty;
+    margin: 0 auto 40px;
+    max-width: 80%;
+}
+
+.hover-animation{
+    transition: all .3s ease-out;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.hover-animation:hover{
+    filter: drop-shadow(0 15px 40px rgba(13, 76, 255, .6));
+    transform: scale(1.05);
+}
+
+.bg-gradient-hero:after{
+  content: "";
+  display: block;
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  bottom: -80px;
+  z-index: 0;
+  background: linear-gradient(150deg, #2a60f9 8%, #fd8ee5 58%, #f2c94c 90%);
+  filter: blur(200px);
+  border-radius: 50%;
+  animation: animations_fadeIn__pd9S3 1.5s linear 1s both;
+  transform: translateZ(0);
+  opacity: 0.9;
+  right: 50%;
+  left: 20%;
+}

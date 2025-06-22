@@ -1,0 +1,26 @@
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.video {
+  width: 353px;
+  height: 617px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.heroImage {
+  position: absolute;
+  z-index: 2;
+  /* will-change: transform, opacity; */
+}
+.hero-img-1{
+  transform: translateX(-115%) translateY(10px) rotate(-13deg);
+}
