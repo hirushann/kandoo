@@ -45,3 +45,17 @@
   right: 50%;
   left: 20%;
 }
+
+.features_gradient_custom{
+    position: absolute;
+    z-index: 0;
+    width: 540px;
+    height: 540px;
+    border-radius: 50%;
+    right: 0;
+    bottom: 0;
+    transform: translate(20%, 15%);
+    background: linear-gradient(153.77deg, #f2c94c 22.49%, #eb5757 41.98%, #fd8ee5 54.85%, #2a60f9 86.6%);
+    opacity: .5;
+    filter: blur(175px);
+}
