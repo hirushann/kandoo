@@ -1,10 +1,11 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import ThirdSection from '../../components/ThirdSection';
 import HeroSection from '../../components/HeroSection';
+import SecondSection from '../../components/SecondSection';
+import ThirdSection from '../../components/ThirdSection';
 import FourthSection from '../../components/FourthSection';
 import FifthSection from '../../components/FifthSection';
-import SecondSection from '../../components/SecondSection';
+import SixthSection from '../../components/SixthSection';
 import { ReviewSection } from '../../components/ReviewSection';
 
 export default function Home() {
@@ -21,6 +22,8 @@ export default function Home() {
         <FourthSection />
 
         <FifthSection />
+
+        <SixthSection />
 
         <ReviewSection />
       </main>

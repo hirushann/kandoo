@@ -108,3 +108,16 @@
 .img-impressive-work{
     transform: translateX(200px) translateY(-310px) rotate(12deg);
 }
+
+.features_gradient3__06lnB{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    width: 630px;
+    height: 630px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ff9c9c, #8994f2 38.83%, #fd8ee5 69.56%, #7ddfed);
+    opacity: .2;
+    filter: blur(125px);
+}

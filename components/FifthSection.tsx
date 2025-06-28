@@ -6,8 +6,8 @@ export default function FifthSection() {
         <div className="max-w-7xl mx-auto px-6 flex items-center min-h-[900px]">
         
             {/* Left side with video and floating cards */}
-            <div className="flex items-center justify-center max-w-1/3 shrink-0 relative min-w-1/2">
-                <div className="features_gradient2__l1YAF"></div>
+            <div className="flex items-center justify-center max-w-1/2 shrink-0 relative min-w-1/2">
+                <div className="features_gradient3__06lnB"></div>
 
                 <div className="absolute shrink-0 translate-x-[200px] translate-y-[-310px] rotate-12">
                     <Image src="/exp_img_02a.webp" alt="Impressive Work" width={250} height={253} className="w-[250px] h-[253px]" />
