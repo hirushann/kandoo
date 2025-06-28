@@ -2,42 +2,19 @@ import Image from "next/image";
 
 export default function RealLifeSection() {
   return (
-    <section className="py-32">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-32 items-center">
-        {/* Left text content */}
-        <div>
-          <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-6">
-            Practice Real-Life English Conversations <br />
-            in Real-Life Situations
-          </h2>
-          <p className="text-gray-600 text-lg">
-            Immerse in conversations that span every situation—be it business meetings, job interviews, or friendly chats—and witness your fluency thrive where it truly matters: for you.
-          </p>
-        </div>
+    <section className="py-32 bg-white relative">
+      <div className="max-w-7xl mx-auto px-7.5">
+        <div className="max-w-[66%] mx-auto text-center relative z-50">
+          <h2 className="text-[54px] leading-normal mb-5 mx-auto">An AI English speaking partner built to help you achieve English fluency</h2>
 
-        {/* Right side with video and floating cards */}
-        <div className="relative w-full h-full">
-        <div className="features_gradient_custom"></div>
-          <Image
-            src="/exp_img_01.webp"
-            alt="Conversation topics"
-            width={280}
-            height={565}
-            className="absolute left-[-100px] top-1/2 transform -translate-y-1/2 hidden lg:block"
-          />
+          <p className="text-lg font-normal leading-normal mx-auto mb-5 py-10">We believe everyone deserves the opportunity to speak English fluently and that learning English shouldn't be a barrier that holds anyone back from fulfilling their dreams and aspirations.</p>
 
-          <div className="rounded-2xl overflow-hidden shadow-lg w-full max-w-md mx-auto relative z-10">
-            
-            <video
-              src="/exp_vdo_01.mp4"
-              autoPlay
-              loop
-              muted
-              className="w-full h-auto"
-            />
-          </div>
+          <p className="text-3xl leading-normal text-pretty">Until now, those seeking to improve their English skills had to rely on expensive, one-on-one English tutors with limited availability. To bridge this gap, we've developed the most advanced AI English speaking practice app building a bespoke system of cutting-edge large language models, specifically trained and optimized to provide the best and most personalized experience for each learner. With Loora by their side, we enable people to tap into their true potential. We equip them with the tools to master English, <strong>paving the way for better opportunities in their careers, businesses, education, or personal lives.</strong></p>
         </div>
+        <div className="aboutAi_spaceBall1__Lten1"></div>
+        <div className="aboutAi_spaceBall2__XpBSo"></div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="178" height="20" fill="none" className="aboutAi_divider__DiVsR mx-auto"><path fill="#9DA0A6" d="M0 9h53v2H0zM125 9h53v2h-53z"></path><rect width="8" height="20" x="85" fill="#9DA0A6" rx="4"></rect><rect width="8" height="14" x="73" y="3" fill="#9DA0A6" rx="4"></rect><rect width="8" height="10" x="97" y="5" fill="#9DA0A6" rx="4"></rect></svg>
     </section>
   );
 }

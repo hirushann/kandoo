@@ -14,7 +14,7 @@ export default function HeroSection() {
 
     <div className="relative w-full h-full overflow-hidden flex flex-col justify-center items-center bg-white">
         <div className="bg-white flex flex-col gap-8 justify-center items-center max-w-[1210px] mx-auto pt-12">
-            <h1 className="text-7xl text-black font-bold text-center text-wrap-balance line-height-7xl">Unlock your full potential with your very own <span className="text-[#2a60f9]">AI English tutor</span></h1>
+            <h1 className="text-7xl text-black font-bold text-center text-wrap-balance line-height-7xl ">Unlock your full potential with your very own <span className="text-[#2a60f9]">AI English tutor</span></h1>
             <p className="text-[#41444d] text-3xl line-height-2xl text-wrap-pretty text-center max-w-[80%] mx-auto p-0">
             Speak fluent English with Loora, the most advanced AI English teacher. Engage in personalized conversations with your speaking partner, receive feedback, and open doors to limitless opportunities.
             </p>
