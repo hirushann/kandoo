@@ -7,6 +7,7 @@ import FourthSection from '../../components/FourthSection';
 import FifthSection from '../../components/FifthSection';
 import SixthSection from '../../components/SixthSection';
 import { ReviewSection } from '../../components/ReviewSection';
+import SeventhSection from 'components/SeventhSection';
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
         <FifthSection />
 
         <SixthSection />
+
+        <SeventhSection />
 
         <ReviewSection />
       </main>
