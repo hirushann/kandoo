@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
+import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 
 const reviews = [
@@ -59,7 +60,7 @@ const ReviewCard = (
 
   return (
   <div className={cn(
-    "w-72 rounded-xl !border-2 p-6 bg-white shadow-md h-[420px] flex flex-col justify-between",
+    "w-72 !border-3 p-10 bg-white shadow-md h-[420px] flex flex-col justify-between rounded-[25px]",
     color.includes("border") && `border ${color}`,
   )}>
     <div className={cn("text-3xl mb-4", color)}>
@@ -84,19 +85,27 @@ const ReviewCard = (
  
 export function ReviewSection() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-r from-[#fdfbff] to-[#fef9fb] py-16">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review, index) => (
-          <div key={review.username} className="px-4">
-            {ReviewCard(review, index)}
-          </div>
-        ))}
-      </Marquee>
-      {/* <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee> */}
+    <div className="mt-[200px] pt-48 review-section-container-bg">
+      <div className="mx-auto px-8 relative max-w-[1210px] flex justify-center items-center gap-5">
+        <h2 className="text-6xl leading-normal text-center text-balance font-bold">Loora is great for</h2>
+        <TypingAnimation className="text-[#2a60f9] text-6xl leading-normal text-center text-balance">Business</TypingAnimation>
+      </div>
+      <div className="pt-32 pb-20">
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {firstRow.map((review, index) => (
+            <div key={review.username} className="px-4">
+              {ReviewCard(review, index)}
+            </div>
+          ))}
+        </Marquee>
+      </div>
+
+      <div className="mx-auto px-8 relative max-w-[1210px] flex flex-col justify-center items-center gap-5">
+        <div className="w-full">
+          <p className="font-normal text-[#41444d] text-center">Real reviews from the App Store ☝️</p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="178" height="20" fill="none" className="mt-28"><path fill="#9DA0A6" d="M0 9h53v2H0zM125 9h53v2h-53z"></path><rect width="8" height="20" x="85" fill="#9DA0A6" rx="4"></rect><rect width="8" height="14" x="73" y="3" fill="#9DA0A6" rx="4"></rect><rect width="8" height="10" x="97" y="5" fill="#9DA0A6" rx="4"></rect></svg>
+      </div>
       {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div> */}
     </div>
