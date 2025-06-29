@@ -8,6 +8,7 @@ import FifthSection from '../../components/FifthSection';
 import SixthSection from '../../components/SixthSection';
 import { ReviewSection } from '../../components/ReviewSection';
 import SeventhSection from 'components/SeventhSection';
+import PricingSection from 'components/PricingSection';
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
         <SeventhSection />
 
         <ReviewSection />
+
+        <PricingSection />
       </main>
       <Footer />
     </div>

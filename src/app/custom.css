@@ -125,3 +125,93 @@
 .review-section-container-bg{
     background: linear-gradient(139.87deg, rgb(247, 237, 255), rgba(255, 248, 237, 0.5) 31.29%, rgba(250, 250, 250, 0) 58.26%);
 }
+
+.comparison_table td:not(td:first-child) {
+    text-align: center;
+}
+
+table.comparison_table thead td:nth-child(2) {
+    border-top: 1px solid rgb(224, 224, 224);
+    border-right: 1px solid rgb(224, 224, 224);
+    border-left: 1px solid rgb(224, 224, 224);
+    border-image: initial;
+    border-bottom: none;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.comparison_table thead td {
+    padding: 0px;
+    background: rgb(255, 255, 255) !important;
+}
+
+.comparison_table tr:nth-child(2n+1) td:last-child {
+    border-radius: 0px 25px 25px 0px;
+}
+
+.comparison_table tr:nth-child(2n+1) td:first-child {
+    border-radius: 25px 0px 0px 25px;
+}
+.comparison_table tr:nth-child(2n+1) td {
+    background: rgb(245, 245, 245);
+}
+.comparison_table td {
+    padding: 20px 40px;
+    border: none;
+}
+
+.comparison_table tr:nth-child(2n+1) td {
+    background: rgb(245, 245, 245);
+}
+.comparison_table td:nth-child(2) {
+    border-left: 1px solid rgb(224, 224, 224);
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+.comparison_table tbody tr:last-child td:nth-child(2)::after {
+    content: "";
+    display: block;
+    width: calc(100% - 0px);
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+    border-right: 1px solid rgb(224, 224, 224);
+    border-bottom: 1px solid rgb(224, 224, 224);
+    border-left: 1px solid rgb(224, 224, 224);
+    border-image: initial;
+    border-top: none;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.comparison_table{
+    position: relative;
+}
+
+.comparison_table tbody tr:last-child td:nth-child(2) {
+    border-left: 0px solid #e0e0e0;
+    border-right: 0px solid #e0e0e0;
+}
+
+.comparison_table thead tr:first-child td:nth-child(2){
+    border: 0px;
+}
+
+.comparison_table thead tr:first-child td:nth-child(2)::after{
+    content: "";
+    display: block;
+    width: calc(100% - 0px);
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
+    border-right: 1px solid rgb(224, 224, 224);
+    border-top: 1px solid rgb(224, 224, 224);
+    border-left: 1px solid rgb(224, 224, 224);
+    border-image: initial;
+    /* border-top: none; */
+    border-radius: 25px 25px 0px 0px;
+}
