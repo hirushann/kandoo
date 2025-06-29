@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FourthSection() {
   return (
-    <section className="py-32 bg-white">
+    <section className="bg-white">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-32 items-center">
         {/* Left text content */}
         <div>

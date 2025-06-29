@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SeventhSection() {
   return (
-    <section className="pb-32 bg-white">
+    <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 flex items-center min-h-[900px] flex-row-reverse">
             <div className="pr-[8%]">
                 <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance">

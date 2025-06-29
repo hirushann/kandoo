@@ -21,17 +21,20 @@ export default function Home() {
 
         <ThirdSection />
 
-        <FourthSection />
+        <div className='flex flex-col gap-28 px-3.5'>
+          <FourthSection />
 
-        <FifthSection />
+          <FifthSection />
 
-        <SixthSection />
+          <SixthSection />
 
-        <SeventhSection />
+          <SeventhSection />
+        </div>
 
-        <ReviewSection />
+          <ReviewSection />
 
-        <PricingSection />
+          <PricingSection />
+        
       </main>
       <Footer />
     </div>

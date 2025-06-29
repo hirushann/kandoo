@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FifthSection() {
   return (
-    <section className="py-32 bg-white">
+    <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 flex items-center min-h-[900px]">
         
             {/* Left side with video and floating cards */}

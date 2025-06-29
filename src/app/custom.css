@@ -77,16 +77,16 @@
     width: 950px;
     height: 950px;
     background: linear-gradient(318deg, #2a60f9 13%, #fd8ee5 85%);
-    opacity: 0.8; 
+    opacity: 0.8;
     transform: translateX(-70%) translateY(-75%) translateZ(1px);
 }
 
 .aboutAi_spaceBall2__XpBSo{
-    opacity: 0.8; 
-    transform: translateX(-20%) translateY(-35%) translateZ(1px);
-    width: 690px;
-    height: 690px;
+    width: 590px;
+    height: 590px;
     background: linear-gradient(328deg, #2a60f9 13%, #fd8ee5 85%);
+    opacity: 0.8;
+    transform: translateX(-20%) translateY(-35%) translateZ(1px);
 }
 
 .aboutAi_divider__DiVsR {
