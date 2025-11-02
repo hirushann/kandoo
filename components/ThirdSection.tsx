@@ -5,11 +5,11 @@ export default function RealLifeSection() {
     <section className="py-32 bg-white relative">
       <div className="max-w-7xl mx-auto px-7.5">
         <div className="max-w-[66%] mx-auto text-center relative z-50">
-          <h2 className="text-[54px] leading-tight text-balance mb-5 mx-auto break-words font-bold">An AI English speaking partner built to help you achieve English fluency</h2>
+          <h2 className="text-[54px] leading-tight text-balance mb-5 mx-auto break-words font-bold">Learn English Smarter - with Kandoo, Your AI Learning Partner</h2>
 
-          <p className="text-lg text-[#41444d] font-normal leading-normal mx-auto mb-10 px-20">We believe everyone deserves the opportunity to speak English fluently and that learning English shouldn't be a barrier that holds anyone back from fulfilling their dreams and aspirations.</p>
+          <p className="text-lg text-[#41444d] font-normal leading-normal mx-auto mb-10 px-20">Say goodbye to expensive one-on-one classes and rigid schedules. Kandoo makes English learning simple, affordable, and always within reach.</p>
 
-          <p className="text-[26px] leading-normal text-pretty text-[#040a19] break-words">Until now, those seeking to improve their English skills had to rely on expensive, one-on-one English tutors with limited availability. To bridge this gap, we've developed the most advanced AI English speaking practice app building a bespoke system of cutting-edge large language models, specifically trained and optimized to provide the best and most personalized experience for each learner. With Loora by their side, we enable people to tap into their true potential. We equip them with the tools to master English, <strong>paving the way for better opportunities in their careers, businesses, education, or personal lives.</strong></p>
+          <p className="text-[26px] leading-normal text-pretty text-[#040a19] break-words">Powered by next-generation AI, Kandoo learns with you — adapting to your pace, giving personalized feedback, and helping you speak naturally and confidently. Our smart technology keeps evolving, bringing you the latest innovations in AI to make every lesson smoother, faster, and more fun. <strong>📱 Anytime. Anywhere. Your journey to English fluency starts with Kandoo.</strong></p>
         </div>
         <div className="aboutAi_spaceBall1__Lten1"></div>
         <div className="aboutAi_spaceBall2__XpBSo"></div>

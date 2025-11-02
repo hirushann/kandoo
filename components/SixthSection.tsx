@@ -6,11 +6,11 @@ export default function SixthSection() {
         <div className="max-w-7xl mx-auto px-6 flex items-center min-h-[900px]">
             <div className="pr-[8%]">
                 <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance">
-                Stress free: <br />
-                Loora is here just for you
+                Kandoo provides a safe place for you to <br />
+                practice anytime anywhere.
                 </h2>
                 <p className="text-[#41444d] text-lg leading-normal text-pretty">
-                    Loora, your always-there AI English teacher, offers a safe, judgement-free zone for practicing English. It’s dedicated to empowering you every step of the way, provides feedback and tools to boost your confidence, making your path to English mastery both effective and fast.
+                    Our user-friendly AI coach is ready 24/7, giving you a safe space to learn, make mistakes, and improve without fear of embarrassment.
                 </p>
             </div>
             <div className="flex max-w-1/2 shrink-0 relative min-w-1/2">

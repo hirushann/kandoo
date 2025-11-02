@@ -6,11 +6,11 @@ export default function SeventhSection() {
         <div className="max-w-7xl mx-auto px-6 flex items-center min-h-[900px] flex-row-reverse">
             <div className="pr-[8%]">
                 <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance">
-                Talk about Anything<br />
-                and Everything
+                Practice english for any and <br />
+                every situation
                 </h2>
                 <p className="text-[#41444d] text-lg leading-normal text-pretty">
-                    Improve your English speaking, pronunciation and grammar by chatting with Loora, the most advanced AI English tutor. Talk about anything from sports to tech, business, fashion, or your latest book or show. Loora is up for any topic.
+                    With advanced, high-end AI technology and premium features unlocked through our subscriptions, you can practice English for any and every situation. Kandoo grows with you — helping you sound natural, fluent, and ready for anything life brings.
                 </p>
             </div>
             <div className="flex items-center justify-between flex-col min-h-full pr-7.5 min-w-1/2 shrink-0 relative">

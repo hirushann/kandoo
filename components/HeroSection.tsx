@@ -14,9 +14,9 @@ export default function HeroSection() {
 
     <div className="relative w-full h-full overflow-hidden flex flex-col justify-center items-center bg-white">
         <div className="bg-white flex flex-col gap-8 justify-center items-center max-w-[1210px] mx-auto pt-12">
-            <h1 className="text-7xl text-black font-bold text-center text-wrap-balance line-height-7xl ">Unlock your full potential with your very own <span className="text-[#2a60f9]">AI English tutor</span></h1>
+            <h1 className="text-7xl text-black font-bold text-center text-wrap-balance line-height-7xl ">Step into the future of education with cutting-edge <span className="text-[#2a60f9]">AI innovations.</span></h1>
             <p className="text-[#41444d] text-3xl line-height-2xl text-wrap-pretty text-center max-w-[80%] mx-auto p-0">
-            Speak fluent English with Loora, the most advanced AI English teacher. Engage in personalized conversations with your speaking partner, receive feedback, and open doors to limitless opportunities.
+              Kandoo – The AI-powered English learning app is here to revolutionize the way Sri Lankans learn English. It’s convenient, effective, efficient, and full of fun.
             </p>
 
             <div className='flex justify-center gap-4 items-center'>
@@ -42,11 +42,11 @@ export default function HeroSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: 'easeOut' }}
           >
-            <Image src="/hero_img_01.webp" alt="Hero 1" width={240} height={360} priority />
+            <Image src="/5.png" alt="Hero 1" width={240} height={360} priority />
           </motion.div>
 
           <motion.div
-            className="absolute top-[70%] left-[200px] -translate-y-1/2 rotate-[-4deg] z-[10]"
+            className="absolute top-[75%] left-[200px] -translate-y-1/2 rotate-[-4deg] z-[10]"
             initial={{ opacity: 1, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -56,29 +56,28 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.div
-            className="absolute top-[30%] right-[240px] -translate-y-1/2 rotate-[6deg] z-[10]"
+            className="absolute top-[35%] right-[220px] -translate-y-1/2 rotate-[6deg] z-[10]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
           >
-            <Image src="/hero_img_03.webp" alt="Hero 3" width={240} height={300} priority />
+            <Image src="/3.png" alt="Hero 3" width={240} height={300} priority />
           </motion.div>
 
           <motion.div
-            className="absolute top-[70%] right-[240px] -translate-y-1/2 rotate-[12deg] z-[10]"
+            className="absolute top-[68%] right-[240px] -translate-y-1/2 rotate-[12deg] z-[10]"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.7, ease: 'easeOut' }}
           >
-            <Image src="/hero_img_04.webp" alt="Hero 4" width={240} height={340} priority />
+            <Image src="/4.png" alt="Hero 4" width={240} height={340} priority />
           </motion.div>
 
           {/* Video - now sits above images, with rounded corners */}
-          <video className="relative z-10 mx-auto rounded-[28px]" autoPlay muted loop playsInline width="353" height="617">
-            <source src="/hero_vdo.webm" type="video/webm" />
-            <source src="/hero_vdo.mp4" type="video/mp4" />
+          <video className="relative z-10 mx-auto rounded-[28px] object-cover bg-white" autoPlay muted loop playsInline width="353" height="627">
+            <source src="/video landing.mp4" type="video/mp4" />
           </video>
         </div>
     </div>

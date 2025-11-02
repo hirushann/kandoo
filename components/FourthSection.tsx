@@ -7,11 +7,11 @@ export default function FourthSection() {
         {/* Left text content */}
         <div>
           <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-6">
-            Practice Real-Life English Conversations <br />
-            in Real-Life Situations
+            Practice Real English for Real Life — with <br />
+            our speaking buddies
           </h2>
           <p className="text-gray-600 text-lg">
-            Immerse in conversations that span every situation—be it business meetings, job interviews, or friendly chats—and witness your fluency thrive where it truly matters: for you.
+            From job interviews to business meetings — even that tricky family dinner toast — Kandoo helps you practise every situation before it happens, so you’ll always speak with confidence, not hesitation.
           </p>
         </div>
 
@@ -27,13 +27,12 @@ export default function FourthSection() {
           />
 
           <div className="overflow-hidden shadow-lg w-full max-w-md mx-auto relative z-10">
-            
             <video
-              src="/exp_vdo_01.mp4"
+              src="/speaking_demos.mp4"
               autoPlay
               loop
               muted
-              className="w-full h-auto border-4 border-white rounded-3xl"
+              className="w-full h-[400px] object-cover border-4 border-white rounded-3xl bg-white"
             />
           </div>
         </div>
