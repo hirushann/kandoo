@@ -12,10 +12,10 @@ export default function HeroSection() {
 
   return (
 
-    <div className="relative w-full h-full overflow-hidden flex flex-col justify-center items-center bg-white">
+    <div className="relative w-full h-full overflow-hidden flex flex-col justify-center items-center bg-white z-[99999]">
         <div className="bg-white flex flex-col gap-8 justify-center items-center max-w-[1210px] mx-auto pt-12">
-            <h1 className="text-7xl text-black font-bold text-center text-wrap-balance line-height-7xl ">Step into the future of education with cutting-edge <span className="text-[#2a60f9]">AI innovations.</span></h1>
-            <p className="text-[#41444d] text-3xl line-height-2xl text-wrap-pretty text-center max-w-[80%] mx-auto p-0">
+            <h1 className="text-6xl text-black font-bold text-center text-wrap-balance line-height-7xl ">Step into the future of education with cutting-edge <span className="text-[#2a60f9]">AI innovations.</span></h1>
+            <p className="text-[#41444d] text-[26px] leading-[1.5] text-wrap-pretty text-center max-w-[80%] mx-auto p-0">
               Kandoo – The AI-powered English learning app is here to revolutionize the way Sri Lankans learn English. It’s convenient, effective, efficient, and full of fun.
             </p>
 
@@ -33,7 +33,7 @@ export default function HeroSection() {
             </div>
         </div> 
 
-        <div className="py-24 relative w-full max-w-[1210px] mx-auto bg-gradient-hero z-0">
+        <div className="py-24 relative w-full max-w-[1210px] mx-auto bg-gradient-hero z-0 mt-[80px]">
           {/* Animated Images - moved before video, z-index adjusted to be behind video */}
           <motion.div
             className="absolute top-[30%] left-[260px] -translate-y-1/2 rotate-[-12deg] z-[10]"

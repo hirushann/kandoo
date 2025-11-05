@@ -19,14 +19,14 @@ export default function FourthSection() {
         <div className="relative w-full h-full">
         <div className="features_gradient_custom"></div>
           <Image
-            src="/exp_img_01.webp"
+            src="/speaking-bubbles.png"
             alt="Conversation topics"
             width={280}
             height={565}
-            className="absolute left-[-100px] top-1/2 transform -translate-y-1/2 hidden lg:block"
+            className="absolute left-[-100px] top-1/2 transform -translate-y-1/2 hidden lg:block w-[220px] h-[465px] object-contain"
           />
 
-          <div className="overflow-hidden shadow-lg w-full max-w-md mx-auto relative z-10">
+          <div className="overflow-hidden shadow-lg w-full max-w-md ml-auto relative z-10">
             <video
               src="/speaking_demos.mp4"
               autoPlay

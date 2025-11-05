@@ -21,7 +21,7 @@ export default function Home() {
 
         <ThirdSection />
 
-        <div className='flex flex-col gap-28 px-3.5'>
+        <div className='flex flex-col gap-28 px-3.5 relative'>
           <FourthSection />
 
           <FifthSection />

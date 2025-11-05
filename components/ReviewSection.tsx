@@ -87,7 +87,7 @@ export function ReviewSection() {
   return (
     <div className="pt-48 review-section-container-bg">
       <div className="mx-auto px-8 relative max-w-[1210px] flex justify-center items-center gap-5">
-        <h2 className="text-6xl leading-normal text-center text-balance font-bold">Loora is great for</h2>
+        <h2 className="text-6xl leading-normal text-center text-balance font-bold">Kandoo is great for</h2>
         <TypingAnimation className="text-[#2a60f9] text-6xl leading-normal text-center text-balance">Business</TypingAnimation>
       </div>
       <div className="pt-32 pb-20">

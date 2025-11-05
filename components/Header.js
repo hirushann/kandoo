@@ -14,7 +14,6 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   return (
     <header
       className={`fixed top-0 left-0 w-full z-[999999999] transition-all duration-300 ${
@@ -22,15 +21,16 @@ export default function Header() {
       }`}
     >
       <div className="px-8 flex justify-between items-center transition-all duration-300">
-        <div className={`text-2xl font-bold ${scrolled ? 'text-black' : 'text-white'}`}>
+        <div className={`text-2xl font-bold ${scrolled ? 'text-black' : 'text-black'}`}>
             <Link href="/">
-                <Image
-                src="/loora-logo.svg"
-                alt="Loora Logo"
+                {/* <Image
+                src="/kandoo.png"
+                alt="Kandoo Logo"
                 width={112}
                 height={32}
                 priority
-                />
+                /> */}
+                <h1 className='text-4xl uppercase font-bold'>Kandoo</h1>
             </Link>
         </div>
 

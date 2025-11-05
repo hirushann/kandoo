@@ -5,7 +5,7 @@ export default function PricingSection() {
     <section className="pt-[200px] px-[15px] pb-[200px]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center min-h-[900px] relative">
             <h2 className="text-6xl leading-tight font-bold text-center mx-auto mb-36 text-balance">
-                Loora is always available.
+                Kandoo is always available.
                 <br />
                 Anytime, anywhere.
             </h2>

@@ -14,7 +14,7 @@ export default function RealLifeSection() {
         <div className="aboutAi_spaceBall1__Lten1"></div>
         <div className="aboutAi_spaceBall2__XpBSo"></div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="178" height="20" fill="none" className="aboutAi_divider__DiVsR mx-auto"><path fill="#9DA0A6" d="M0 9h53v2H0zM125 9h53v2h-53z"></path><rect width="8" height="20" x="85" fill="#9DA0A6" rx="4"></rect><rect width="8" height="14" x="73" y="3" fill="#9DA0A6" rx="4"></rect><rect width="8" height="10" x="97" y="5" fill="#9DA0A6" rx="4"></rect></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="178" height="20" fill="none" className="my-36 mx-auto z-[99999999]"><path fill="#9DA0A6" d="M0 9h53v2H0zM125 9h53v2h-53z"></path><rect width="8" height="20" x="85" fill="#9DA0A6" rx="4"></rect><rect width="8" height="14" x="73" y="3" fill="#9DA0A6" rx="4"></rect><rect width="8" height="10" x="97" y="5" fill="#9DA0A6" rx="4"></rect></svg>
     </section>
   );
 }

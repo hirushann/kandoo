@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-white text-black">
         <div className="max-w-7xl mx-auto flex justify-end relative py-[90px] px-[15px]">
             <aside className="justify-start mr-auto flex flex-col gap-[40px] w-1/2 shrink-0">
-                <img src="/loora-logo.svg" alt="Loora Logo" className="mb-4 w-32" />
+                <img src="/kandoo.png" alt="Loora Logo" className="mb-4 w-32" />
                 <p className="text-xl leading-normal text-black max-w-[60%]">
                     We believe everyone deserves the opportunity to speak English fluently.
                 </p>
