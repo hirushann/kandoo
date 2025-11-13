@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function RealLifeSection() {
   return (
-    <section className="py-32 bg-white relative">
+    <section className="py-32 bg-white relative pb-0 lg:pb-32">
       <div className="max-w-7xl mx-auto px-7.5">
         <div className="lg:max-w-[66%] mx-auto text-center relative z-50">
           <h2 className="text-[30px] lg:text-[54px] leading-tight text-balance mb-5 mx-auto break-words font-bold">Learn English Smarter - with Kandoo, Your AI Learning Partner</h2>

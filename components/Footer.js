@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <footer className="bg-white text-black">
-        <div className="max-w-7xl mx-auto flex justify-end relative py-[90px] px-[15px]">
-            <aside className="justify-start mr-auto flex flex-col gap-[40px] w-1/2 shrink-0">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-5  justify-end relative py-[90px] px-[15px]">
+            <aside className="justify-start mr-auto flex flex-col gap-[40px] w-full lg:w-1/2 shrink-0">
                 <img src="/kandoo.png" alt="Loora Logo" className="mb-4 w-32" />
                 <p className="text-xl leading-normal text-black max-w-[60%]">
                     We believe everyone deserves the opportunity to speak English fluently.
@@ -19,10 +19,10 @@ export default function Footer() {
                         </a>
                     </div>
                 </div>
-                <p className="text-sm leading-normal text-black">Copyright © 2025 mangobyte.lk All rights reserved.</p>
+                <p className="text-sm leading-normal text-black hidden lg:block">Copyright © 2025 mangobyte.lk All rights reserved.</p>
             </aside>
 
-            <div className="flex flex-col w-[15%] shrink-0 gap-3.5">
+            <div className="flex flex-col w-full lg:w-[15%] shrink-0 gap-3.5">
                 <h4 className="font-bold text-base text-black">Follow us</h4>
                 <ul className="flex flex-col gap-3.5">
                     <li>
@@ -64,7 +64,7 @@ export default function Footer() {
                 </ul>
             </div>
 
-            <div className="flex flex-col w-[15%] shrink-0 gap-3.5">
+            <div className="flex flex-col w-full lg:w-[15%] shrink-0 gap-3.5">
                 <h4 className="font-bold text-base leading-normal text-black">Company</h4>
                 <ul className="flex flex-col gap-3.5">
                     <li><a href="#">Student log-in</a></li>
@@ -74,7 +74,7 @@ export default function Footer() {
                 </ul>
             </div>
 
-            <div className="flex flex-col w-[15%] shrink-0 gap-3.5">
+            <div className="flex flex-col w-full lg:w-[15%] shrink-0 gap-3.5">
                 <h4 className="font-bold text-base leading-normal text-black">Support</h4>
                 <ul className="flex flex-col gap-3.5">
                     <li><a href="#">FAQ</a></li>
@@ -83,7 +83,11 @@ export default function Footer() {
                     <li><a href="#">Privacy policy</a></li>
                 </ul>
             </div>
+            <div className="flex justify-center items-center py-5 lg:hidden">
+                <p className="text-sm leading-normal text-black">Copyright © 2025 mangobyte.lk All rights reserved.</p>
+            </div>
         </div>
+        
     </footer>
   );
 }

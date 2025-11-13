@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function SeventhSection() {
   return (
     <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 flex items-center min-h-[900px] flex-row-reverse">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center min-h-[900px] lg:flex-row-reverse">
             <div className="pr-[8%]">
                 <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance">
                 Practice english for any and <br />
@@ -13,7 +13,7 @@ export default function SeventhSection() {
                     With advanced, high-end AI technology and premium features unlocked through our subscriptions, you can practice English for any and every situation. Kandoo grows with you — helping you sound natural, fluent, and ready for anything life brings.
                 </p>
             </div>
-            <div className="flex items-center justify-between flex-col min-h-full pr-7.5 min-w-1/2 shrink-0 relative">
+            <div className="flex items-center justify-between flex-col min-h-full pr-7.5 min-w-1/2 shrink-0 relative pt-8 lg:pt-0">
                 <div className="flex items-center flex-row-reverse">
                     <div className="w-3/4 relative z-10">
                         <Image src="/exp_img_04f.webp" alt="" width={388} height={239} className="translate-x-[50px] p-0 m-0" />

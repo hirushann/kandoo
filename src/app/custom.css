@@ -215,3 +215,25 @@ table.comparison_table thead td:nth-child(2) {
     /* border-top: none; */
     border-radius: 25px 25px 0px 0px;
 }
+
+@media screen and (max-width: 767px) {
+    .aboutAi_spaceBall1__Lten1{
+        width: 350px;
+        height: 350px;  
+    }
+
+    .aboutAi_spaceBall2__XpBSo{
+        width: 350px;
+        height: 350px;
+    }
+
+    .aboutAi_spaceBall1__Lten1, .aboutAi_spaceBall2__XpBSo{
+        top: 38%;
+        left: 30%;
+    }
+
+    .features_gradient_custom{
+        width: 240px;
+        height: 240px;
+    }
+}

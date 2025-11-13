@@ -34,7 +34,7 @@ export default function Header() {
             </Link>
         </div>
 
-        <nav className="">
+        <nav className="hidden lg:block">
           <Link href="#features" className={`font-medium uppercase ${scrolled ? 'text-black' : 'text-black'}`}>
             Kandoo for business
           </Link>
