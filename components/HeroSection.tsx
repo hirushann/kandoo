@@ -16,7 +16,7 @@ export default function HeroSection() {
 
   const searchParams = useSearchParams();
   const lang = searchParams.get("lang") || "en";
-  const t = { en, si, ta }[lang];
+  const t = { en, si, ta }[lang] ?? en;
 
   return (
 
