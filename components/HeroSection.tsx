@@ -4,19 +4,30 @@ import styles from './HeroSection.module.css';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { div } from 'framer-motion/client';
+import { useSearchParams } from "next/navigation";
+import en from "@/locales/en.json";
+import si from "@/locales/si.json";
+import ta from "@/locales/ta.json";
 
 
 export default function HeroSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang") || "en";
+  const t = { en, si, ta }[lang];
+
   return (
 
     <div className="relative w-full h-full overflow-hidden flex flex-col justify-center items-center bg-white z-[99999]">
         <div className="bg-white flex flex-col gap-8 justify-center items-center max-w-[1210px] mx-auto pt-12 px-[36px] lg:px-0">
-            <h1 className="text-[38px] lg:text-6xl text-black font-bold text-center text-wrap-balance lg:line-height-7xl">Step into the future of education with cutting-edge <span className="text-[#2a60f9]">AI innovations.</span></h1>
+            <h1
+              className="text-[38px] lg:text-6xl text-black font-bold text-center text-wrap-balance lg:line-height-7xl"
+              dangerouslySetInnerHTML={{ __html: t.hero_title }}
+            />
             <p className="text-[#41444d] text-[22px] lg:text-[26px] leading-[1.5] text-wrap-pretty text-center max-w-[80%] mx-auto p-0">
-              Kandoo – The AI-powered English learning app is here to revolutionize the way Sri Lankans learn English. It’s convenient, effective, efficient, and full of fun.
+              {t.hero_subtext}
             </p>
 
             <div className='flex flex-col lg:flex-row justify-center gap-4 items-center'>

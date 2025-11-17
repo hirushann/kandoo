@@ -14,6 +14,16 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const [currentLang, setCurrentLang] = useState("en");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const lang = new URLSearchParams(window.location.search).get("lang") || "en";
+      setCurrentLang(lang);
+    }
+  }, []);
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-[999999999] transition-all duration-300 ${
@@ -34,10 +44,21 @@ export default function Header() {
             </Link>
         </div>
 
-        <nav className="hidden lg:block">
-          <Link href="#features" className={`font-medium uppercase ${scrolled ? 'text-black' : 'text-black'}`}>
-            Kandoo for business
-          </Link>
+        <nav className="block">
+          <select
+            value={currentLang}
+            className={`font-medium uppercase bg-transparent outline-none cursor-pointer ${
+              scrolled ? 'text-black' : 'text-black'
+            }`}
+            onChange={(e) => {
+              const lang = e.target.value;
+              window.location.href = lang === "en" ? "/" : `/?lang=${lang}`;
+            }}
+          >
+            <option value="en">English</option>
+            <option value="si">සිංහල</option>
+            <option value="ta">தமிழ்</option>
+          </select>
         </nav>
       </div>
     </header>
