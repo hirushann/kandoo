@@ -17,10 +17,29 @@ export default function Header() {
 
   const [currentLang, setCurrentLang] = useState("en");
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const lang = new URLSearchParams(window.location.search).get("lang") || "en";
-      setCurrentLang(lang);
+useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get("lang");
+
+    if (urlLang) {
+      setCurrentLang(urlLang);
+      return;
+    }
+
+    const browserLang = navigator.language.toLowerCase();
+
+    let detectedLang = "en";
+
+    if (browserLang.startsWith("si")) detectedLang = "si";
+    else if (browserLang.startsWith("ta")) detectedLang = "ta";
+    else detectedLang = "en";
+
+    setCurrentLang(detectedLang);
+
+    if (detectedLang !== "en") {
+      window.location.replace(`/?lang=${detectedLang}`);
     }
   }, []);
 

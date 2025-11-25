@@ -87,8 +87,8 @@ export function ReviewSection() {
   return (
     <div className="pt-24 lg:pt-48 review-section-container-bg">
       <div className="mx-auto px-8 relative max-w-[1210px] flex flex-col lg:flex-row justify-center items-center gap-5">
-        <h2 className="text-6xl leading-normal text-center text-balance font-bold">Kandoo is great for</h2>
-        <TypingAnimation className="text-[#2a60f9] text-6xl leading-normal text-center text-balance">Business</TypingAnimation>
+        <h2 className="text-6xl leading-normal text-center text-balance font-bold">Why People Love</h2>
+        <TypingAnimation className="text-[#2a60f9] text-6xl leading-normal text-center text-balance">Kandoo</TypingAnimation>
       </div>
       <div className="pt-32 pb-20">
         <Marquee pauseOnHover className="[--duration:20s]">
@@ -101,9 +101,9 @@ export function ReviewSection() {
       </div>
 
       <div className="mx-auto px-8 relative max-w-[1210px] flex flex-col justify-center items-center gap-5">
-        <div className="w-full">
+        {/* <div className="w-full">
           <p className="font-normal text-[#41444d] text-center">Real reviews from the App Store ☝️</p>
-        </div>
+        </div> */}
         <svg xmlns="http://www.w3.org/2000/svg" width="178" height="20" fill="none" className="mt-28"><path fill="#9DA0A6" d="M0 9h53v2H0zM125 9h53v2h-53z"></path><rect width="8" height="20" x="85" fill="#9DA0A6" rx="4"></rect><rect width="8" height="14" x="73" y="3" fill="#9DA0A6" rx="4"></rect><rect width="8" height="10" x="97" y="5" fill="#9DA0A6" rx="4"></rect></svg>
       </div>
       {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>

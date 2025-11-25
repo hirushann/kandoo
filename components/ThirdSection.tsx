@@ -9,7 +9,7 @@ export default function RealLifeSection() {
 
           <p className="text-base lg:text-lg text-[#41444d] font-normal leading-normal mx-auto mb-10 lg:px-20">Say goodbye to expensive one-on-one classes and rigid schedules. Kandoo makes English learning simple, affordable, and always within reach.</p>
 
-          <p className="text-base lg:text-[26px] leading-normal text-pretty text-[#040a19] break-words">Powered by next-generation AI, Kandoo learns with you — adapting to your pace, giving personalized feedback, and helping you speak naturally and confidently. Our smart technology keeps evolving, bringing you the latest innovations in AI to make every lesson smoother, faster, and more fun. <strong>📱 Anytime. Anywhere. Your journey to English fluency starts with Kandoo.</strong></p>
+          <p className="text-base lg:text-[26px] leading-normal text-pretty text-[#040a19] break-words">Powered by next-generation AI, Kandoo learns with you - adapting to your pace, giving personalized feedback, and helping you speak naturally and confidently. Our smart technology keeps evolving, bringing you the latest innovations in AI to make every lesson smoother, faster, and more fun. <strong>📱 Anytime. Anywhere. Your journey to English fluency starts with Kandoo.</strong></p>
         </div>
         <div className="aboutAi_spaceBall1__Lten1"></div>
         <div className="aboutAi_spaceBall2__XpBSo"></div>

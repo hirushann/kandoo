@@ -30,7 +30,7 @@ export default function FifthSection() {
                 instantly and Perfect Your Performance.
                 </h2>
                 <p className="text-[#41444d] text-lg leading-normal text-pretty">
-                With Kandoo’s smart progress dashboard, you can track how far you’ve come — and how close you are to fluency. Our AI instantly evaluates your speaking, pronunciation, and grammar, helping you spot mistakes, correct them, and improve on the go. Get real-time feedback, personalized tips, and continuous progress updates — all inside the app. Every conversation helps you grow, refine your accent, and unlock your full English-speaking potential.
+                With Kandoo’s smart progress dashboard, you can track how far you’ve come - and how close you are to fluency. Our AI instantly evaluates your speaking, pronunciation, and grammar, helping you spot mistakes, correct them, and improve on the go. Get real-time feedback, personalized tips, and continuous progress updates - all inside the app. Every conversation helps you grow, refine your accent, and unlock your full English-speaking potential.
                 </p>
             </div>
         </div>

@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono, Fraunces } from "next/font/google";
-import { Inter } from 'next/font/google';
-import { Fraunces } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import './custom.css';
 import 'animate.css';
 
-const inter = Inter({
+const quicksand = Quicksand({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-quicksand',
   display: 'swap',
-});
-
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-fraunces',
-  display: 'swap',
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -31,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-          className={`${inter.className} antialiased`}
+          className={`${quicksand.className} antialiased`}
       >
         {children}
       </body>

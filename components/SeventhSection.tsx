@@ -10,7 +10,7 @@ export default function SeventhSection() {
                 every situation
                 </h2>
                 <p className="text-[#41444d] text-lg leading-normal text-pretty">
-                    With advanced, high-end AI technology and premium features unlocked through our subscriptions, you can practice English for any and every situation. Kandoo grows with you — helping you sound natural, fluent, and ready for anything life brings.
+                    With advanced, high-end AI technology and premium features unlocked through our subscriptions, you can practice English for any and every situation. Kandoo grows with you - helping you sound natural, fluent, and ready for anything life brings.
                 </p>
             </div>
             <div className="flex items-center justify-between flex-col min-h-full pr-7.5 min-w-1/2 shrink-0 relative pt-8 lg:pt-0">

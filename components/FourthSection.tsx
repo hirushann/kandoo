@@ -7,11 +7,11 @@ export default function FourthSection() {
         {/* Left text content */}
         <div>
           <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-6">
-            Practice Real English for Real Life — with <br />
+            Practice Real English for Real Life - with <br />
             our speaking buddies
           </h2>
           <p className="text-gray-600 text-lg">
-            From job interviews to business meetings — even that tricky family dinner toast — Kandoo helps you practise every situation before it happens, so you’ll always speak with confidence, not hesitation.
+            From job interviews to business meetings - even that tricky family dinner toast - Kandoo helps you practise every situation before it happens, so you’ll always speak with confidence, not hesitation.
           </p>
         </div>
 

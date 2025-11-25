@@ -36,7 +36,8 @@
   position: absolute;
   bottom: -80px;
   z-index: 0;
-  background: linear-gradient(150deg, #2a60f9 8%, #fd8ee5 58%, #f2c94c 90%);
+  /* background: linear-gradient(150deg, #2a60f9 8%, #fd8ee5 58%, #f2c94c 90%); */
+  background: linear-gradient(150deg, #1B1C6D 8%, #FFD5EB 58%, #C1F1D4 90%);
   filter: blur(200px);
   border-radius: 50%;
   animation: animations_fadeIn__pd9S3 1.5s linear 1s both;
@@ -55,7 +56,8 @@
     right: 0;
     bottom: 0;
     transform: translate(20%, 15%);
-    background: linear-gradient(153.77deg, #f2c94c 22.49%, #eb5757 41.98%, #fd8ee5 54.85%, #2a60f9 86.6%);
+    /* background: linear-gradient(153.77deg, #f2c94c 22.49%, #eb5757 41.98%, #fd8ee5 54.85%, #2a60f9 86.6%); */
+    background: linear-gradient(153.77deg, #C1F1D4 22.49%, #E0D6FE 41.98%, #FFD5EB 54.85%, #1B1C6D 86.6%);
     opacity: .5;
     filter: blur(175px);
 }
@@ -76,7 +78,8 @@
 .aboutAi_spaceBall1__Lten1{
     width: 950px;
     height: 950px;
-    background: linear-gradient(318deg, #2a60f9 13%, #fd8ee5 85%);
+    /* background: linear-gradient(318deg, #2a60f9 13%, #fd8ee5 85%); */
+    background: linear-gradient(318deg, #1B1C6D 13%, #FFD5EB 85%);
     opacity: 0.8;
     transform: translateX(-70%) translateY(-75%) translateZ(1px);
 }
@@ -84,7 +87,8 @@
 .aboutAi_spaceBall2__XpBSo{
     width: 590px;
     height: 590px;
-    background: linear-gradient(328deg, #2a60f9 13%, #fd8ee5 85%);
+    /* background: linear-gradient(328deg, #2a60f9 13%, #fd8ee5 85%); */
+    background: linear-gradient(328deg, #1B1C6D 13%, #FFD5EB 85%);
     opacity: 0.8;
     transform: translateX(-20%) translateY(-35%) translateZ(1px);
 }
@@ -101,7 +105,8 @@
     width: 450px;
     height: 450px;
     border-radius: 50%;
-    background: linear-gradient(180deg, #43ff92 23.21%, #fd8ee5);
+    /* background: linear-gradient(180deg, #43ff92 23.21%, #fd8ee5); */
+    background: linear-gradient(180deg, #C1F1D4 23.21%, #FFD5EB);
     opacity: .5;
     filter: blur(125px);
 }
