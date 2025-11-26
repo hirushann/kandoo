@@ -85,10 +85,10 @@ export default function Footer() {
             <div className="flex flex-col w-full lg:w-[15%] shrink-0 gap-3.5">
                 <h4 className="font-bold text-base leading-normal text-black">Support</h4>
                 <ul className="flex flex-col gap-3.5">
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact support</a></li>
-                    <li><a href="#">Terms & conditions</a></li>
-                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contact-support">Contact support</a></li>
+                    <li><a href="/terms-conditions">Terms & conditions</a></li>
+                    <li><a href="/privacy-policy">Privacy policy</a></li>
                 </ul>
             </div>
             <div className="flex justify-center items-center py-5 lg:hidden">

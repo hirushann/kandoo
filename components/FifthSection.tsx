@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function FifthSection() {
   return (
     <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center min-h-[900px] pt-16 lg:t-52">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center pt-16 lg:pt-52">
         
             {/* Left side with video and floating cards */}
             <div className="flex items-center justify-center lg:max-w-1/2 shrink-0 relative min-w-1/2">

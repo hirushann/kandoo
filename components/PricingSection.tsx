@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function PricingSection() {
   return (
-    <section className="pt-[200px] px-[15px] pb-[200px]">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center min-h-[900px] relative">
+    <section className="pt-[100px] px-[15px]">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center relative">
             <h2 className="text-6xl leading-tight font-bold text-center mx-auto text-balance">
                 Kandoo is always available.
                 <br />
@@ -16,7 +16,7 @@ export default function PricingSection() {
                         <tr className="w-1/3">
                             <td></td>
                             <td className="relative">
-                                <Image src="/kandoo-app.png" alt="Learning with Loora" width={96} height={96} className="-translate-y-[50%] mx-auto z-[99999999] relative rounded-[20px] w-[96px] h-[96] object-fill" />
+                                <Image src="/app icon.png" alt="Learning with Loora" width={96} height={96} className="-translate-y-[50%] mx-auto z-[99999999] relative rounded-[20px] w-[96px] h-[96] object-fill" />
                             </td>
                             <td>
                                 <Image src="/icon-teacher.webp" alt="Learning with Loora" width={96} height={96} className="-translate-y-[50%] mx-auto" />
