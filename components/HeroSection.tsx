@@ -42,6 +42,10 @@ export default function HeroSection() {
                   </a>
               </div>
             </div>
+
+            <div>
+              <Image src="/ms-startup.png" alt="Hero 1" width={240} height={360} priority />
+            </div>
         </div> 
 
         <div className="py-12 lg:py-24 relative w-full max-w-[1210px] mx-auto bg-gradient-hero z-0 mt-16 lg:mt-24">

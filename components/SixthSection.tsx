@@ -1,17 +1,20 @@
+'use client';
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import en from "@/locales/en.json";
+import si from "@/locales/si.json";
+import ta from "@/locales/ta.json";
 
 export default function SixthSection() {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang") || "en";
+  const t = { en, si, ta }[lang] ?? en;
   return (
     <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center">
             <div className="pr-[8%]">
-                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance">
-                Kandoo provides a safe place for you to <br />
-                practice anytime anywhere.
-                </h2>
-                <p className="text-[#41444d] text-lg leading-normal text-pretty">
-                    Our user-friendly AI coach is ready 24/7, giving you a safe space to learn, make mistakes, and improve without fear of embarrassment.
-                </p>
+                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance" dangerouslySetInnerHTML={{ __html: t.sixth_section_title }} />
+                <p className="text-[#41444d] text-lg leading-normal text-pretty" dangerouslySetInnerHTML={{ __html: t.sixth_section_subtext }} />
             </div>
             <div className="flex lg:max-w-1/2 shrink-0 relative min-w-1/2 pt-8 lg:pt-0">
                 <div className="features_gradient3__06lnB"></div>

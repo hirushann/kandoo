@@ -1,11 +1,20 @@
+'use client';
+import { useSearchParams } from "next/navigation";
+import en from "@/locales/en.json";
+import si from "@/locales/si.json";
+import ta from "@/locales/ta.json";
+
 export default function Footer() {
+    const searchParams = useSearchParams();
+    const lang = searchParams.get("lang") || "en";
+    const t = { en, si, ta }[lang] ?? en;
   return (
     <footer className="bg-white text-black">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-5  justify-end relative py-[90px] px-[15px]">
             <aside className="justify-start mr-auto flex flex-col gap-[40px] w-full lg:w-1/2 shrink-0">
-                <img src="/kandoo.png" alt="Loora Logo" className="mb-4 w-32" />
+                <img src="/logo.svg " alt="Loora Logo" className="mb-4 w-32" />
                 <p className="text-xl leading-normal text-black max-w-[60%]">
-                    We believe everyone deserves the opportunity to speak English fluently.
+                    {t.footer_belief}
                 </p>
                 <div className='flex justify-start gap-4 items-center'>
                     <div>
@@ -19,18 +28,18 @@ export default function Footer() {
                         </a>
                     </div>
                 </div>
-                <p className="text-sm leading-normal text-black hidden lg:block">Copyright © 2025 kandoo.lk All rights reserved.</p>
+                <p className="text-sm leading-normal text-black hidden lg:block">{t.footer_copyright}</p>
             </aside>
 
             <div className="flex flex-col w-full lg:w-[15%] shrink-0 gap-3.5">
-                <h4 className="font-bold text-base text-black">Follow us</h4>
+                <h4 className="font-bold text-base text-black">{t.footer_follow_us}</h4>
                 <ul className="flex flex-col gap-3.5">
                     <li>
                         <a href="https://www.tiktok.com/@kandoo.app?lang=en" className="flex items-center gap-2.5 text-base leading-normal" target="_blank" rel="noreferrer noopener">
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><g clipPath="url(#icon-tiktok_svg__a)"><path fill="#3C3C3B" d="M10.08 8.88v3.815c-.632.17-1.253.318-1.86.509-.678.215-1.302.547-1.772 1.1-.815.964-.89 2.517-.19 3.703.868 1.472 2.83 2.14 4.337 1.447 1.041-.476 1.603-1.358 1.829-2.428.151-.713.204-1.458.208-2.188.014-4.645 0-9.293-.007-13.938 0-.06.007-.12.014-.194h3.759c.413 3.12 1.997 5.093 5.311 5.372v3.65a5.54 5.54 0 0 1-2.724-.329c-.847-.325-1.666-.73-2.524-1.112v.314c0 2.17.01 4.342 0 6.512-.01 1.521-.293 2.993-1.01 4.352-1.238 2.347-3.144 3.805-5.812 4.076-2.372.24-4.338-.656-5.83-2.506a7.55 7.55 0 0 1-.65-8.572C4.16 10.758 5.704 9.759 7.58 9.24a9.9 9.9 0 0 1 2.499-.356z"></path></g><defs><clipPath id="icon-tiktok_svg__a"><path fill="#fff" d="M2.118.706H21.71v22.871H2.118z"></path></clipPath></defs></svg>
                             </span>
-                            <span>Tiktok</span>
+                            <span>{t.footer_tiktok}</span>
                         </a>
                     </li>
                     <li>
@@ -38,7 +47,7 @@ export default function Footer() {
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3C3C3B" viewBox="0 0 640 640"><path d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z"/></svg>
                             </span>
-                            <span>Facebook</span>
+                            <span>{t.footer_facebook}</span>
                         </a>
                     </li>
 
@@ -47,7 +56,7 @@ export default function Footer() {
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><g clipPath="url(#icon-youtube_svg__a)"><path fill="#3C3C3B" fillRule="evenodd" d="M19.306 3.882H4.984C2.566 3.882.706 5.742.706 8.16v7.81c0 2.418 1.86 4.278 4.278 4.278h14.322c2.418 0 4.465-1.86 4.465-4.277V8.16c0-2.418-2.047-4.278-4.465-4.278m-3.35 8.185L9.82 8.534V15.6z" clipRule="evenodd"></path></g><defs><clipPath id="icon-youtube_svg__a"><path fill="#fff" d="M.706 3.882h23.06v16.366H.707z"></path></clipPath></defs></svg>
                             </span>
-                            <span>YouTube</span>
+                            <span>{t.footer_youtube}</span>
                         </a>
                     </li>
 
@@ -56,7 +65,7 @@ export default function Footer() {
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><g clipPath="url(#icon-instagram_svg__a)"><path fill="#3C3C3B" fillRule="evenodd" d="M6.974 1.059h10.101c3.247 0 5.916 2.668 5.916 5.915v10.052c0 3.247-2.669 5.915-5.916 5.915h-10.1c-3.248-.004-5.916-2.672-5.916-5.919V6.97c0-3.243 2.668-5.911 5.915-5.911M17.915 4.88c.681 0 1.257.575 1.257 1.256 0 .682-.576 1.257-1.257 1.257a1.24 1.24 0 0 1-1.256-1.257 1.24 1.24 0 0 1 1.256-1.256M12 6.031h.053c3.247 0 5.968 2.722 5.968 5.969 0 3.296-2.721 5.968-5.968 5.968H12c-3.247 0-5.915-2.668-5.915-5.968 0-3.247 2.668-5.968 5.915-5.968m0 2.04h.053c2.146 0 3.925 1.78 3.925 3.925 0 2.2-1.78 3.978-3.925 3.978H12c-2.146 0-3.925-1.779-3.925-3.978 0-2.146 1.78-3.924 3.925-3.924M7.027 2.944h9.999a4.09 4.09 0 0 1 4.083 4.084v9.946a4.09 4.09 0 0 1-4.083 4.083H7.027a4.09 4.09 0 0 1-4.083-4.083V7.027a4.09 4.09 0 0 1 4.083-4.084" clipRule="evenodd"></path></g><defs><clipPath id="icon-instagram_svg__a"><path fill="#fff" d="M1.059 1.059H22.99v21.879H1.059z"></path></clipPath></defs></svg>
                             </span>
-                            <span>Instagram</span>
+                            <span>{t.footer_instagram}</span>
                         </a>
                     </li>
 
@@ -65,7 +74,7 @@ export default function Footer() {
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><g clipPath="url(#icon-linkedin_svg__a)"><path fill="#3C3C3B" fillRule="evenodd" d="M2.852 8.707H6.72v12.988H2.852zm1.91-6.59a2.345 2.345 0 0 1 2.34 2.34 2.345 2.345 0 0 1-2.34 2.34c-1.29 0-2.291-1.051-2.291-2.34s1.002-2.34 2.29-2.34m4.249 6.59h3.818v1.814a4.42 4.42 0 0 1 3.678-1.959h1.052c2.435 0 4.394 2.005 4.394 4.395v8.738h-3.819v-7.02c-.05-1.479-1.052-2.626-2.53-2.626-1.48 0-2.722 1.148-2.771 2.626v7.02H9.014V8.707z" clipRule="evenodd"></path></g><defs><clipPath id="icon-linkedin_svg__a"><path fill="#fff" d="M2.47 2.118h19.483v19.578H2.47z"></path></clipPath></defs></svg>
                             </span>
-                            <span>LinkedIn</span>
+                            <span>{t.footer_linkedin}</span>
                         </a>
                     </li>
                     
@@ -83,16 +92,16 @@ export default function Footer() {
             </div> */}
 
             <div className="flex flex-col w-full lg:w-[15%] shrink-0 gap-3.5">
-                <h4 className="font-bold text-base leading-normal text-black">Support</h4>
+                <h4 className="font-bold text-base leading-normal text-black">{t.footer_support}</h4>
                 <ul className="flex flex-col gap-3.5">
-                    <li><a href="/faq">FAQ</a></li>
-                    <li><a href="/contact-support">Contact support</a></li>
-                    <li><a href="/terms-conditions">Terms & conditions</a></li>
-                    <li><a href="/privacy-policy">Privacy policy</a></li>
+                    <li><a href="/faq">{t.footer_faq}</a></li>
+                    <li><a href="/contact-support">{t.footer_contact_support}</a></li>
+                    <li><a href="/terms-conditions">{t.footer_terms_conditions}</a></li>
+                    <li><a href="/privacy-policy">{t.footer_privacy_policy}</a></li>
                 </ul>
             </div>
             <div className="flex justify-center items-center py-5 lg:hidden">
-                <p className="text-sm leading-normal text-black">Copyright © 2025 kandoo.lk All rights reserved.</p>
+                <p className="text-sm leading-normal text-black">{t.footer_copyright}</p>
             </div>
         </div>
         

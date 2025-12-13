@@ -52,14 +52,14 @@ useEffect(() => {
       <div className="px-8 flex justify-between items-center transition-all duration-300">
         <div className={`text-2xl font-bold ${scrolled ? 'text-black' : 'text-black'}`}>
             <Link href="/">
-                {/* <Image
-                src="/kandoo.png"
+                <Image
+                src="/logo.svg"
                 alt="Kandoo Logo"
                 width={112}
                 height={32}
                 priority
-                /> */}
-                <h1 className='text-4xl uppercase font-bold'>Kandoo</h1>
+                />
+                {/* <h1 className='text-4xl uppercase font-bold'>Kandoo</h1> */}
             </Link>
         </div>
 

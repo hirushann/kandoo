@@ -1,17 +1,20 @@
+'use client';
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import en from "@/locales/en.json";
+import si from "@/locales/si.json";
+import ta from "@/locales/ta.json";
 
 export default function SeventhSection() {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang") || "en";
+  const t = { en, si, ta }[lang] ?? en;
   return (
     <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center min-h-[900px] lg:flex-row-reverse">
             <div className="pr-[8%]">
-                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance">
-                Practice english for any and <br />
-                every situation
-                </h2>
-                <p className="text-[#41444d] text-lg leading-normal text-pretty">
-                    With advanced, high-end AI technology and premium features unlocked through our subscriptions, you can practice English for any and every situation. Kandoo grows with you - helping you sound natural, fluent, and ready for anything life brings.
-                </p>
+                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance" dangerouslySetInnerHTML={{ __html: t.seventh_section_title }} />
+                <p className="text-[#41444d] text-lg leading-normal text-pretty" dangerouslySetInnerHTML={{ __html: t.seventh_section_subtext }} />
             </div>
             <div className="flex items-center justify-between flex-col min-h-full pr-7.5 min-w-1/2 shrink-0 relative pt-8 lg:pt-0">
                 <div className="flex items-center flex-row-reverse">

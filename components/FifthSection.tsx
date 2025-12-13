@@ -1,6 +1,14 @@
+'use client';
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import en from "@/locales/en.json";
+import si from "@/locales/si.json";
+import ta from "@/locales/ta.json";
 
 export default function FifthSection() {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang") || "en";
+  const t = { en, si, ta }[lang] ?? en;
   return (
     <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center pt-16 lg:pt-52">
@@ -25,13 +33,8 @@ export default function FifthSection() {
 
             {/* Right text content */}
             <div className="pr-[8%] pt-8 lg:pt-0">
-                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance">
-                Check Your Progress<br />
-                instantly and Perfect Your Performance.
-                </h2>
-                <p className="text-[#41444d] text-lg leading-normal text-pretty">
-                With Kandoo’s smart progress dashboard, you can track how far you’ve come - and how close you are to fluency. Our AI instantly evaluates your speaking, pronunciation, and grammar, helping you spot mistakes, correct them, and improve on the go. Get real-time feedback, personalized tips, and continuous progress updates - all inside the app. Every conversation helps you grow, refine your accent, and unlock your full English-speaking potential.
-                </p>
+                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance" dangerouslySetInnerHTML={{ __html: t.fifth_section_title }} />
+                <p className="text-[#41444d] text-lg leading-normal text-pretty" dangerouslySetInnerHTML={{ __html: t.fifth_section_subtext }} />
             </div>
         </div>
     </section>

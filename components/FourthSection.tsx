@@ -1,18 +1,21 @@
+'use client';
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import en from "@/locales/en.json";
+import si from "@/locales/si.json";
+import ta from "@/locales/ta.json";
 
 export default function FourthSection() {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get("lang") || "en";
+  const t = { en, si, ta }[lang] ?? en;
   return (
     <section className="bg-white">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-32 items-center">
         {/* Left text content */}
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-6">
-            Practice Real English for Real Life - with <br />
-            our speaking buddies
-          </h2>
-          <p className="text-gray-600 text-lg">
-            From job interviews to business meetings - even that tricky family dinner toast - Kandoo helps you practise every situation before it happens, so you’ll always speak with confidence, not hesitation.
-          </p>
+          <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-6" dangerouslySetInnerHTML={{ __html: t.fourth_section_title }} />
+          <p className="text-gray-600 text-lg" dangerouslySetInnerHTML={{ __html: t.fourth_section_subtext }} />
         </div>
 
         {/* Right side with video and floating cards */}

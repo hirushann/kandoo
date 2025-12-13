@@ -1,14 +1,19 @@
+'use client';
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import en from "@/locales/en.json";
+import si from "@/locales/si.json";
+import ta from "@/locales/ta.json";
 
 export default function PricingSection() {
-  return (
+    const searchParams = useSearchParams();
+    const lang = searchParams.get("lang") || "en";
+    const t = { en, si, ta }[lang] ?? en;
+    
+    return (
     <section className="pt-[100px] px-[15px]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center relative">
-            <h2 className="text-6xl leading-tight font-bold text-center mx-auto text-balance">
-                Kandoo is always available.
-                <br />
-                Anytime, anywhere.
-            </h2>
+            <h2 className="text-6xl leading-tight font-bold text-center mx-auto text-balance" dangerouslySetInnerHTML={{ __html: t.pricing_section_title }} />
 
             <div className="w-full overflow-x-auto bg-transparent py-36">
                 <table className="border-0 w-full font-semibold comparison_table">
@@ -28,7 +33,7 @@ export default function PricingSection() {
                             <td>
                                 <div className="flex items-center gap-4 font-normal text-[#040a19]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path fill="#040A19" d="M18.825 28.958q-.68.68-1.642.68a2.24 2.24 0 0 1-1.641-.68l-12.5-12.5a2 2 0 0 1-.51-.788 2.8 2.8 0 0 1-.136-.87V4.667q0-.978.646-1.629.645-.65 1.625-.65H14.8q.456 0 .904.14.447.14.82.514l12.434 12.425q.713.713.713 1.679 0 .965-.713 1.679zm-1.55-1.558 10.133-10.133L14.8 4.667H4.667V14.8zM8.167 9.867q.7 0 1.216-.517.517-.516.517-1.217 0-.7-.517-1.216A1.67 1.67 0 0 0 8.167 6.4q-.7 0-1.217.517t-.517 1.216.517 1.217 1.217.517"></path></svg>
-                                    Price
+                                    {t.pricing_price}
                                 </div>
                             </td>
                             <td>
@@ -42,35 +47,35 @@ export default function PricingSection() {
                             <td>
                                 <div className="flex items-center gap-4 font-normal text-[#040a19]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path fill="#040A19" d="M14.433 24.464 9.77 19.84l1.455-1.463 3.208 3.14 6.142-6.14 1.456 1.497zm-8.361 5.069q-.92 0-1.596-.676-.675-.675-.675-1.595V6.738q0-.923.675-1.6.675-.68 1.596-.679h2.095v-2h2.302v2H21.53v-2h2.302v2h2.095q.924 0 1.601.678.678.678.678 1.601v20.524q0 .92-.678 1.595-.677.675-1.6.676zm0-2.271h19.856V13H6.072zm0-16.262h19.856V6.738H6.072z"></path></svg>
-                                    Availability
+                                    {t.pricing_availability}
                                 </div>
                             </td>
                             <td>
-                                Always Available
+                                {t.pricing_availability_always}
                             </td>
                             <td>
-                                Limited
+                                {t.pricing_availability_limited}
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <div className="flex items-center gap-4 font-normal text-[#040a19]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path fill="#040A19" d="M11.817 3.333V1.15h8.366v2.183zm3.095 15.068h2.176v-7.683h-2.176zm1.086 11.266q-2.516 0-4.735-.965a12.5 12.5 0 0 1-3.878-2.623 12.4 12.4 0 0 1-2.622-3.877 11.8 11.8 0 0 1-.962-4.734q0-2.515.962-4.734a12.4 12.4 0 0 1 2.623-3.88 12.5 12.5 0 0 1 3.879-2.628A11.7 11.7 0 0 1 16 5.26q2.25 0 4.236.75t3.528 2.091l1.771-1.771 1.544 1.535-1.772 1.772q1.208 1.35 2.054 3.265t.846 4.565q0 2.518-.965 4.737a12.4 12.4 0 0 1-2.626 3.877 12.5 12.5 0 0 1-3.881 2.622q-2.22.963-4.737.964m0-2.28q4.145 0 7.038-2.887 2.892-2.888 2.892-7.031 0-4.145-2.891-7.037T16 7.539 8.965 10.43t-2.893 7.036 2.891 7.033T16 27.388"></path></svg>
-                                    Session length
+                                    {t.pricing_session_length}
                                 </div>
                             </td>
                             <td>
-                                Up to you
+                                {t.pricing_session_length_unlimited}
                             </td>
                             <td>
-                                45 min
+                                {t.pricing_session_length_limited}
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <div className="flex items-center gap-4 font-normal text-[#040a19]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path fill="#040A19" d="m26.86 21.475-1.7-1.707q1.593-1.7 2.45-3.491.86-1.79.859-4.4 0-2.603-.846-4.388t-2.43-3.48l1.69-1.689Q28.75 4.258 29.8 6.547t1.05 5.327q0 3.06-1.058 5.361-1.057 2.3-2.933 4.24m-4.674-4.805-1.682-1.709q.583-.641.905-1.384.322-.744.322-1.689t-.322-1.683a5.3 5.3 0 0 0-.897-1.389l1.69-1.699a7.3 7.3 0 0 1 1.38 2.172q.522 1.245.522 2.597 0 1.364-.53 2.61a7.4 7.4 0 0 1-1.388 2.174m-10.162.423q-2.295 0-3.752-1.46-1.455-1.46-1.455-3.75 0-2.288 1.454-3.743 1.455-1.454 3.743-1.454 2.29 0 3.75 1.454 1.46 1.455 1.46 3.744t-1.453 3.749-3.747 1.46M1.15 28.19v-3.34q0-1.355.69-2.282a4.7 4.7 0 0 1 1.688-1.427q1.7-.867 4.06-1.441 2.361-.575 4.428-.575t4.41.57q2.345.572 4.052 1.43a4.9 4.9 0 0 1 1.706 1.44q.705.93.706 2.285v3.34zm2.271-2.279h17.19v-1.037q0-.526-.283-.967a2.3 2.3 0 0 0-.817-.743q-1.6-.9-3.621-1.334a18.5 18.5 0 0 0-3.874-.434q-1.852 0-3.886.472-2.034.471-3.642 1.298a1.94 1.94 0 0 0-.763.707q-.304.475-.304 1zm8.595-11.098q1.275 0 2.102-.826.826-.826.826-2.098 0-1.274-.826-2.103-.825-.83-2.098-.83t-2.102.83-.83 2.098q0 1.277.829 2.103.828.826 2.099.826"></path></svg>
-                                    Talk about any topic
+                                    {t.pricing_topic}
                                 </div>
                             </td>
                             <td>
@@ -84,7 +89,7 @@ export default function PricingSection() {
                             <td>
                                 <div className="flex items-center gap-4 font-normal text-[#040a19]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path fill="#040A19" d="m12.1 19.056 3.9-2.367 3.9 2.367-1.033-4.433 3.466-3-4.566-.367L16 7.056l-1.767 4.2-4.566.367 3.466 3zM2.467 29.533V4.738q0-.923.676-1.6.675-.68 1.595-.679h22.524q.923 0 1.6.678.68.678.679 1.601v17.19q0 .92-.678 1.596-.678.675-1.601.675H7.8zm4.467-7.605h20.328V4.738H4.738v19.586z"></path></svg>
-                                    Real-time feedback
+                                    {t.pricing_feedback}
                                 </div>
                             </td>
                             <td>
@@ -98,7 +103,7 @@ export default function PricingSection() {
                             <td>
                                 <div className="flex items-center gap-4 font-normal text-[#040a19]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path fill="#040A19" d="m12.1 19.056 3.9-2.367 3.9 2.367-1.033-4.433 3.466-3-4.566-.367L16 7.056l-1.767 4.2-4.566.367 3.466 3zM2.467 29.533V4.738q0-.923.676-1.6.675-.68 1.595-.679h22.524q.923 0 1.6.678.68.678.679 1.601v17.19q0 .92-.678 1.596-.678.675-1.601.675H7.8zm4.467-7.605h20.328V4.738H4.738v19.586z"></path></svg>
-                                    Real-time feedback
+                                    {t.pricing_feedback}
                                 </div>
                             </td>
                             <td>
@@ -112,7 +117,7 @@ export default function PricingSection() {
                             <td>
                                 <div className="flex items-center gap-4 font-normal text-[#040a19]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path fill="#040A19" d="M11.335 16.056q1.414 0 2.37-1.025a5.66 5.66 0 0 0 1.333-2.448l-2.045-.499a3.6 3.6 0 0 1-.574 1.284q-.405.568-1.088.568-.681 0-1.086-.568a3.6 3.6 0 0 1-.572-1.284l-2.045.499a5.65 5.65 0 0 0 1.336 2.448q.957 1.025 2.37 1.025m4.662 7.333q1.32 0 2.539-.6 1.22-.599 2.285-1.797l-1.562-1.413q-.741.816-1.571 1.237-.829.42-1.688.42-.858 0-1.688-.42t-1.57-1.237l-1.555 1.413q1.09 1.199 2.291 1.798 1.2.6 2.52.6m4.671-7.333q1.415 0 2.37-1.025a5.66 5.66 0 0 0 1.334-2.448l-2.045-.499a3.6 3.6 0 0 1-.575 1.284q-.405.568-1.087.568t-1.086-.568a3.6 3.6 0 0 1-.573-1.284l-2.044.499a5.65 5.65 0 0 0 1.335 2.448q.957 1.025 2.371 1.025M16 29.533q-2.806 0-5.276-1.062a13.6 13.6 0 0 1-4.3-2.894 13.6 13.6 0 0 1-2.895-4.3Q2.467 18.806 2.467 16t1.062-5.276a13.7 13.7 0 0 1 2.893-4.301 13.7 13.7 0 0 1 4.3-2.898q2.469-1.065 5.277-1.066 2.807 0 5.278 1.065t4.301 2.897a13.7 13.7 0 0 1 2.897 4.301q1.066 2.47 1.066 5.279 0 2.807-1.066 5.277a13.7 13.7 0 0 1-2.898 4.3 13.7 13.7 0 0 1-4.3 2.893q-2.47 1.062-5.277 1.062m0-2.271q4.714 0 7.988-3.274T27.262 16t-3.274-7.988T16 4.738 8.012 8.012 4.738 16t3.274 7.988T16 27.262"></path></svg>
-                                    Pressure-free
+                                    {t.pricing_pressure_free}
                                 </div>
                             </td>
                             <td className="relative">
