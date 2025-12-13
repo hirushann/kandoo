@@ -2,7 +2,7 @@
 
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
@@ -100,7 +100,9 @@ export default function FAQPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

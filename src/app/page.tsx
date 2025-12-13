@@ -23,24 +23,29 @@ export default function Home() {
 
         {/* <SecondSection /> */}
 
-        <ThirdSection />
+        <Suspense fallback={null}>
+          <ThirdSection />
+        </Suspense>
 
-        <div className='flex flex-col gap-28 px-3.5 relative'>
-          <FourthSection />
-
-          <FifthSection />
-
-          <SixthSection />
-
-          <SeventhSection />
-        </div>
+        <Suspense fallback={null}>
+          <div className='flex flex-col gap-28 px-3.5 relative'>
+            <FourthSection />
+            <FifthSection />
+            <SixthSection />
+            <SeventhSection />
+          </div>
+        </Suspense>
 
           <ReviewSection />
 
+        <Suspense fallback={null}>
           <PricingSection />
+        </Suspense>
         
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

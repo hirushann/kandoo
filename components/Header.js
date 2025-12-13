@@ -39,7 +39,8 @@ useEffect(() => {
     setCurrentLang(detectedLang);
 
     if (detectedLang !== "en") {
-      window.location.replace(`/?lang=${detectedLang}`);
+      const currentPath = window.location.pathname;
+      window.location.replace(`${currentPath}?lang=${detectedLang}`);
     }
   }, []);
 
@@ -71,7 +72,19 @@ useEffect(() => {
             }`}
             onChange={(e) => {
               const lang = e.target.value;
-              window.location.href = lang === "en" ? "/" : `/?lang=${lang}`;
+              const currentPath = window.location.pathname;
+              const params = new URLSearchParams(window.location.search);
+              
+              if (lang === "en") {
+                params.delete("lang");
+              } else {
+                params.set("lang", lang);
+              }
+              
+              const newSearch = params.toString();
+              const newUrl = newSearch ? `${currentPath}?${newSearch}` : currentPath;
+              
+              window.location.href = newUrl;
             }}
           >
             <option value="en">English</option>

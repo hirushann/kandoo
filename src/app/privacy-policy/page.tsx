@@ -1,4 +1,4 @@
-'use client';
+import { Suspense } from 'react';
 
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
@@ -160,7 +160,9 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

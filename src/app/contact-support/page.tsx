@@ -3,11 +3,18 @@
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 import { Mail, HelpCircle, MessageSquare, Send, CheckCircle } from 'lucide-react';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { motion } from 'framer-motion';
+import { useSearchParams } from 'next/navigation';
+import en from "@/locales/en.json";
+import si from "@/locales/si.json";
+import ta from "@/locales/ta.json";
 
-export default function ContactSupportPage() {
+function ContactSupportContent() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const searchParams = useSearchParams();
+  const lang = searchParams.get('lang') || 'en';
+  const t = { en, si, ta }[lang as 'en' | 'si' | 'ta'] ?? en;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,7 +40,7 @@ export default function ContactSupportPage() {
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
             >
-              How can we help?
+              {t.contact_hero_title}
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -41,8 +48,7 @@ export default function ContactSupportPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl text-gray-600 max-w-2xl mx-auto"
             >
-              We're here to help you with any questions or issues you might have. 
-              Choose the best way to get in touch below.
+              {t.contact_hero_subtext}
             </motion.p>
           </div>
 
@@ -57,13 +63,13 @@ export default function ContactSupportPage() {
               <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-blue-600 group-hover:scale-110 transition-transform duration-300">
                 <Mail size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Support</h3>
-              <p className="text-gray-600 mb-6">Send us an email and we'll get back to you within 24 hours.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t.contact_email_title}</h3>
+              <p className="text-gray-600 mb-6">{t.contact_email_desc}</p>
               <a 
-                href="mailto:support@kandoo.lk" 
+                href="mailto:info@kandoo.lk" 
                 className="text-blue-600 font-semibold hover:text-blue-700 flex items-center gap-2"
               >
-                support@kandoo.lk
+                info@kandoo.lk
               </a>
             </motion.div>
 
@@ -76,13 +82,13 @@ export default function ContactSupportPage() {
               <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 text-purple-600 group-hover:scale-110 transition-transform duration-300">
                 <HelpCircle size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Help Center</h3>
-              <p className="text-gray-600 mb-6">Find answers to common questions in our FAQ section.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t.contact_help_center_title}</h3>
+              <p className="text-gray-600 mb-6">{t.contact_help_center_desc}</p>
               <a 
                 href="/faq" 
                 className="text-purple-600 font-semibold hover:text-purple-700 flex items-center gap-2"
               >
-                Visit FAQ
+                {t.contact_visit_faq}
               </a>
             </motion.div>
 
@@ -95,8 +101,8 @@ export default function ContactSupportPage() {
               <div className="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center mb-6 text-pink-600 group-hover:scale-110 transition-transform duration-300">
                 <MessageSquare size={32} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Social Media</h3>
-              <p className="text-gray-600 mb-6">Follow us for updates and direct messaging support.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t.contact_social_title}</h3>
+              <p className="text-gray-600 mb-6">{t.contact_social_desc}</p>
               <div className="flex gap-4">
                  {/* Icons are purely decorative here as links are in footer, but could be functional */}
                  <span className="text-sm font-semibold text-pink-600">@kandoo.app</span>
@@ -112,7 +118,7 @@ export default function ContactSupportPage() {
             className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden"
           >
             <div className="p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Send us a message</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t.contact_form_title}</h2>
               
               {formStatus === 'success' ? (
                 <motion.div 
@@ -123,30 +129,30 @@ export default function ContactSupportPage() {
                   <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-green-600">
                     <CheckCircle size={40} />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                  <p className="text-gray-600">We've received your message and will get back to you shortly.</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.contact_success_title}</h3>
+                  <p className="text-gray-600">{t.contact_success_desc}</p>
                   <button 
                     onClick={() => setFormStatus('idle')}
                     className="mt-8 text-gray-500 hover:text-gray-900 underline"
                   >
-                    Send another message
+                    {t.contact_send_another}
                   </button>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">{t.contact_name_label}</label>
                       <input 
                         type="text" 
                         id="name" 
                         required
                         className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:border-black focus:bg-white focus:ring-0 transition-all duration-200"
-                        placeholder="Your name"
+                        placeholder={t.contact_name_placeholder}
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">{t.contact_email_label}</label>
                       <input 
                         type="email" 
                         id="email" 
@@ -158,13 +164,13 @@ export default function ContactSupportPage() {
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">{t.contact_message_label}</label>
                     <textarea 
                       id="message" 
                       required
                       rows={4}
                       className="w-full px-4 py-3 rounded-xl bg-gray-50 border-transparent focus:border-black focus:bg-white focus:ring-0 transition-all duration-200 resize-none"
-                      placeholder="How can we help you?"
+                      placeholder={t.contact_message_placeholder}
                     ></textarea>
                   </div>
 
@@ -174,10 +180,10 @@ export default function ContactSupportPage() {
                     className="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-gray-800 transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {formStatus === 'submitting' ? (
-                      'Sending...'
+                      t.contact_sending
                     ) : (
                       <>
-                        Send Message <Send size={18} />
+                        {t.contact_send_btn} <Send size={18} />
                       </>
                     )}
                   </button>
@@ -191,5 +197,13 @@ export default function ContactSupportPage() {
       
       <Footer />
     </div>
+  );
+}
+
+export default function ContactSupportPage() {
+  return (
+    <Suspense fallback={null}>
+      <ContactSupportContent />
+    </Suspense>
   );
 }
