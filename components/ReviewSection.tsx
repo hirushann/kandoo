@@ -46,10 +46,10 @@ const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
  
 const colors = [
-  "border-orange-300 text-orange-500",
-  "border-blue-300 text-blue-500",
-  "border-pink-300 text-pink-500",
-  "border-purple-300 text-purple-500",
+  "border-[#C1F1D4] text-[#C1F1D4]",
+  // "border-[#1B1C6D] text-blue-500",
+  "border-[#FFD5EB] text-[#FFD5EB]",
+  "border-[#E0D6FE] text-[#E0D6FE]",
 ];
 
 const ReviewCard = (

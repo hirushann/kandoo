@@ -22,7 +22,7 @@ export default function FifthSection() {
                 </div>
                 
                 <div className="absolute shrink-0 translate-x-[-165px] translate-y-[290px] rotate-[-9deg] hidden lg:block">
-                    <Image src="/exp_img_02b.webp" alt="Conversation topics" width={275} height={215} className="w-[275px] h-[215]"/>
+                    <Image src="/accuracy.png" alt="Conversation topics" width={275} height={215} className="w-[310px] h-[250]"/>
                 </div>
 
                 {/* <Image src="/exp_02_device.webp" alt="Practice pronunciation" width={320} height={500} className="w-[320px] h-[618px] border-[3px] border-white rounded-[30px] overflow-hidden shrink-0 z-10"/> */}
