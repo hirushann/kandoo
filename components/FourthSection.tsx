@@ -14,8 +14,8 @@ export default function FourthSection() {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-32 items-center">
         {/* Left text content */}
         <div>
-          <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-6" dangerouslySetInnerHTML={{ __html: t.fourth_section_title }} />
-          <p className="text-gray-600 text-lg" dangerouslySetInnerHTML={{ __html: t.fourth_section_subtext }} />
+          <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-6 text-center lg:text-left" dangerouslySetInnerHTML={{ __html: t.fourth_section_title }} />
+          <p className="text-gray-600 text-lg text-center lg:text-left" dangerouslySetInnerHTML={{ __html: t.fourth_section_subtext }} />
         </div>
 
         {/* Right side with video and floating cards */}

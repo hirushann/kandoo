@@ -13,8 +13,8 @@ export default function SeventhSection() {
     <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center min-h-[900px] lg:flex-row-reverse">
             <div className="pr-[8%]">
-                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance" dangerouslySetInnerHTML={{ __html: t.seventh_section_title }} />
-                <p className="text-[#41444d] text-lg leading-normal text-pretty" dangerouslySetInnerHTML={{ __html: t.seventh_section_subtext }} />
+                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance text-center lg:text-left" dangerouslySetInnerHTML={{ __html: t.seventh_section_title }} />
+                <p className="text-[#41444d] text-lg leading-normal text-pretty text-center lg:text-left" dangerouslySetInnerHTML={{ __html: t.seventh_section_subtext }} />
             </div>
             <div className="flex items-center justify-between flex-col min-h-full pr-7.5 min-w-1/2 shrink-0 relative pt-8 lg:pt-0">
                 <div className="flex items-center flex-row-reverse">

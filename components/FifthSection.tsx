@@ -33,8 +33,8 @@ export default function FifthSection() {
 
             {/* Right text content */}
             <div className="pr-[8%] pt-8 lg:pt-0">
-                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance" dangerouslySetInnerHTML={{ __html: t.fifth_section_title }} />
-                <p className="text-[#41444d] text-lg leading-normal text-pretty" dangerouslySetInnerHTML={{ __html: t.fifth_section_subtext }} />
+                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance text-center lg:text-left" dangerouslySetInnerHTML={{ __html: t.fifth_section_title }} />
+                <p className="text-[#41444d] text-lg leading-normal text-pretty text-center lg:text-left" dangerouslySetInnerHTML={{ __html: t.fifth_section_subtext }} />
             </div>
         </div>
     </section>

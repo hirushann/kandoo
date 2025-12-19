@@ -13,8 +13,8 @@ export default function SixthSection() {
     <section className="bg-white">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center">
             <div className="pr-[8%]">
-                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance" dangerouslySetInnerHTML={{ __html: t.sixth_section_title }} />
-                <p className="text-[#41444d] text-lg leading-normal text-pretty" dangerouslySetInnerHTML={{ __html: t.sixth_section_subtext }} />
+                <h2 className="text-4xl font-bold text-[#040a19] leading-tight mb-5 text-balance text-center lg:text-left" dangerouslySetInnerHTML={{ __html: t.sixth_section_title }} />
+                <p className="text-[#41444d] text-lg leading-normal text-pretty text-center lg:text-left" dangerouslySetInnerHTML={{ __html: t.sixth_section_subtext }} />
             </div>
             <div className="flex lg:max-w-1/2 shrink-0 relative min-w-1/2 pt-8 lg:pt-0">
                 <div className="features_gradient3__06lnB"></div>
